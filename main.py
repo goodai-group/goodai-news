@@ -7,12 +7,12 @@ import time
 import logging
 from dotenv import load_dotenv
 
-# 加载环境变量
+# Load environment variables
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# 从环境变量获取 API 密钥
+# Get API keys from environment variables
 openai_api_key = os.getenv('OPENAI_API_KEY')
 google_api_key = os.getenv('GOOGLE_API_KEY')
 google_cx = os.getenv('GOOGLE_CX')
@@ -105,7 +105,7 @@ def generate_report(news_data, output_dir="reports"):
                 logging.error(f"Error processing news item: {e}")
                 logging.debug(f"Problematic content: {processed_content}")
 
-        time.sleep(1)  # 添加延迟以避免超过API速率限制
+        time.sleep(1)  # Add delay to avoid exceeding API rate limits
 
     for category, items in categories.items():
         if items:
