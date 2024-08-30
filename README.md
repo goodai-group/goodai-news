@@ -1,25 +1,26 @@
 # AI News Report Generator
 
-This project is an automated tool that generates comprehensive reports on the latest developments and impacts of AI across various fields. It fetches recent news articles, processes them using AI to determine relevance and provide summaries, and compiles a bilingual (English and Chinese) report.
+This project is an automated tool that generates comprehensive reports on the latest developments and impacts of AI across various fields. It fetches recent news articles from multiple sources, processes them using AI to determine relevance and provide summaries, and compiles a bilingual (English and Chinese) report.
 
 ## Features
 
-- Fetches recent AI-related news from Google Custom Search API
-- Uses OpenAI's GPT model to determine relevance, categorize, and summarize news articles
-- Generates bilingual (English and Chinese) summaries for each news item
-- Attempts to extract more precise article links from general web pages
-- Compiles a markdown report categorized by different aspects of AI development and application
+- Fetches AI news from multiple sources including RSS feeds and web scraping
+- Filters news articles based on recency
+- Uses Google's Gemini AI to process and summarize news articles
+- Generates bilingual (English and Chinese) summaries and comments
+- Categorizes news articles into relevant AI fields
+- Produces a comprehensive markdown report
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have a Python 3.7+ environment
-- You have obtained API keys for OpenAI and Google Custom Search
+- Python 3.7+
+- Google API key for Gemini AI
 
 ## Installation
 
-1. Clone this repository:
+1. Clone the repository:
    ```
    git clone https://github.com/yourusername/ai-news-report-generator.git
    cd ai-news-report-generator
@@ -31,26 +32,28 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 3. Set up your environment variables:
-   Create a `.env` file in the root directory of the project and add your API keys:
+   Create a `.env` file in the root directory of the project and add your API key:
    ```
-   OPENAI_API_KEY=your_openai_api_key
    GOOGLE_API_KEY=your_google_api_key
-   GOOGLE_CX=your_google_custom_search_engine_id
    ```
 
 ## Usage
 
-To run the script and generate a report:
+Run the main script to generate the report:
 
 ```
 python main.py
 ```
 
-The generated report will be saved in the `reports` directory.
+The script will fetch news, process it, and generate a report in the `reports` directory.
 
 ## Configuration
 
-You can modify the search queries and categories in the `main.py` file to customize the type of news the tool fetches and how it categorizes them.
+You can modify the `ai_news_sources` list in the `main.py` file to add or remove news sources. Each source should have a name, URL, and type (either 'rss' or 'web').
+
+You can also adjust the following parameters in the `main.py` file:
+
+- `limit_per_source`: Maximum
 
 ## Contributing
 
