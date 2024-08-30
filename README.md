@@ -65,8 +65,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgements
 
-- OpenAI for providing the GPT model used in this project
-- Google for their Custom Search API
+- Google for providing the Gemini AI model used in this project
+- Various news sources for their RSS feeds and web content
 
 ## Disclaimer
 
