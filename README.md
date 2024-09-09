@@ -13,6 +13,7 @@ This project is an automated tool that generates comprehensive reports on the la
 
 ## Prerequisites
 
+
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.7+
